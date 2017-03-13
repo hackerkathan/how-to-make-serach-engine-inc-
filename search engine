@@ -1,0 +1,32 @@
+#include <fstream.h>
+#include <stdio.h>
+#include <iostream.h>
+#include <conio.h>
+ void main()
+{
+ char ch;
+ char file[56];
+ char name[78];
+ char a[25];
+ FILE *fp;
+ clrscr();
+ cout<<"                                   ANGLE\n\n\n\n";
+ cout<<"                               ENTER ANYTHING\n\n"<<endl;
+ cin>>a;
+ sprintf(file,"%s",a);
+ fp=fopen( file,"r");
+ if (fp==NULL){
+ printf("sorry");
+ getch();
+ }
+ else
+{
+ while((ch=fgetc(fp))!=EOF)
+ cout<<ch;
+ getch();
+}
+
+ fclose(fp);
+}
+
+
